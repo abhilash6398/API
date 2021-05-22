@@ -1,0 +1,43 @@
+<h1 style="text-align: center;">USERS DATA </h1>
+<div class="container-fluid">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>userName</th>
+        <th>email</th>
+        <th>street</th>
+        <th>suite</th>
+        <th>city</th>
+        <th>zipcode</th>
+        <th>lat</th>
+        <th>lng</th>
+        <th>phone</th>
+        <th>website</th>
+        <th>name</th>
+        <th>catchPhrase</th>
+        <th>bs</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let users of userslist;">
+      <tr>
+        <td>{{users.id}}</td>
+        <td>{{users.username}}</td>
+        <td>{{users.name}}</td>
+        <td>{{users.email}}</td>
+        <td>{{users.address.street}}</td>
+        <td>{{users.address.suite}}</td>
+        <td>{{users.address.city}}</td>
+        <td>{{users.address.zipcode}}</td>
+        <td>{{users.address.geo.lat}}</td>
+        <td>{{users.address.geo.lng}}</td>
+        <td>{{users.phone}}</td>
+        <td>{{users.website}}</td>
+        <td>{{users.company.name}}</td>
+        <td>{{users.company.catchPhrase}}</td>
+        <td>{{users.company.bs}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
