@@ -3,6 +3,7 @@
   <table class="table table-bordered">
     <thead>
       <tr>
+        <th>albumId</th>
         <th>id</th>
         <th>title</th>
         <th>url</th>
@@ -11,6 +12,7 @@
     </thead>
     <tbody *ngFor="let photos of photoslist;">
       <tr>
+        <td>{{photos.albumId}}}</td>
         <td>{{photos.id}}</td>
         <td>{{photos.title}}</td>
         <td>{{photos.url}}</td>
