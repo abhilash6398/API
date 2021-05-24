@@ -15,4 +15,22 @@ export class UsersService {
   public todolist(){
     return this._httpClient.get('https://jsonplaceholder.typicode.com/todos');
   }
+
+  public postslist(){
+    return this._httpClient.get('https://jsonplaceholder.typicode.com/posts');
+  }
+
+  public photoslist(){
+    return this._httpClient.get('https://jsonplaceholder.typicode.com/photos');
+  }
+
+  public commentslist(){
+    return this._httpClient.get('https://jsonplaceholder.typicode.com/comments');
+  }
+
+  public albumslist(){
+    return this._httpClient.get('https://jsonplaceholder.typicode.com/albums');
+  }
+
+
 }

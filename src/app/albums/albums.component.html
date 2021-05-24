@@ -1,0 +1,17 @@
+<h1 style="text-align: center;">ALBUMS DATA </h1>
+<div class="container-fluid">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let albums of albumslist;">
+      <tr>
+        <td>{{albums.id}}</td>
+        <td>{{albums.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

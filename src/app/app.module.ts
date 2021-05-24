@@ -7,15 +7,25 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodosComponent } from './todos/todos.component';
+import { PostsComponent } from './posts/posts.component';
+import { CommentsComponent } from './comments/comments.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { PhotosComponent } from './photos/photos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    TodosComponent
+    TodosComponent,
+    PostsComponent,
+    CommentsComponent,
+    AlbumsComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -24,6 +34,18 @@ import { TodosComponent } from './todos/todos.component';
       },
       {
         path:'todos',component:TodosComponent
+      },
+      {
+        path:'posts',component:PostsComponent
+      },
+      {
+        path:'photos',component:PhotosComponent
+      },
+      {
+        path:'albums',component:AlbumsComponent
+      },
+      {
+        path:'comments',component:CommentsComponent
       }
     ])
   ],

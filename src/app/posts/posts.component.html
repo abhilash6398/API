@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">POSTS DATA </h1>
+<div class="container-fluid">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>body</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let posts of postslist;">
+      <tr>
+        <td>{{posts.userId}}</td>
+        <td>{{posts.id}}</td>
+        <td>{{posts.title}}</td>
+        <td>{{posts.body}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

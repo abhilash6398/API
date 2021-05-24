@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">PHOTOS DATA </h1>
+<div class="container-fluid">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>url</th>
+        <th>thumbnailUrl</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let photos of photoslist;">
+      <tr>
+        <td>{{photos.id}}</td>
+        <td>{{photos.title}}</td>
+        <td>{{photos.url}}</td>
+        <td>{{photos.thumbnailUrl}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
