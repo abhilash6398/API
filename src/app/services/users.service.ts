@@ -11,4 +11,8 @@ export class UsersService {
   public userslist(){
     return this._httpClient.get('https://jsonplaceholder.typicode.com/users');
   }
+
+  public todolist(){
+    return this._httpClient.get('https://jsonplaceholder.typicode.com/todos');
+  }
 }

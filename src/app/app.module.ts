@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       {
         path:'users',component:UsersComponent
+      },
+      {
+        path:'todos',component:TodosComponent
       }
     ])
   ],

@@ -1,0 +1,19 @@
+<h1 style="text-align: center;">Todo DATA </h1>
+<div class="container-fluid">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let todo of todolist;">
+      <tr>
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
