@@ -27,6 +27,6 @@ export class PostsComponent implements OnInit {
 
   getpostbyuserId(){
     this.postslist=this.originallist;
-    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId);
+    this.postslist=this.postslist.filter((x:any)=>x.userId==this.userid);
   }
 }
