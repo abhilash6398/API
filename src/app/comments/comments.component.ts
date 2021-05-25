@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
   commentslist: any=[];
-  // postslist: any=[];
-  // originallist: any=[];
-  // postid: any=0;
-  // postId: any;
+  postslist: any=[];
+  originallist: any=[];
+  postid: any=0;
+  postId: any=[];
 
   constructor(private _usersService: UsersService) { }
 
@@ -19,13 +19,13 @@ export class CommentsComponent implements OnInit {
     this._usersService.commentslist().subscribe(result=>{
       this.commentslist=result;
     })
-    // this._usersService.postslist().subscribe(result=>{
-    //   this.postslist=result;
-    // })
+    this._usersService.postslist().subscribe(result=>{
+      this.postslist=result;
+    })
   }
 
-  // getcommentbypostId(){
-  //   this.commentslist=this.originallist;
-  //   this.commentslist=this.commentslist.filter((x:any)=>x.postId==this.postid)
-  // }
+  getcommentbypostId(){
+    this.commentslist=this.originallist;
+    this.commentslist=this.commentslist.filter((x:any)=>x.postId==this.postid)
+  }
 }

@@ -8,13 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
   postslist: any=[];
+  originallist: any=[];
+  userid: any=[];
+  userslist: any=[];
+  userId: any=[];
 
   constructor(private _usersService: UsersService) { }
 
   ngOnInit(): void {
     this._usersService.postslist().subscribe(result=>{
-      this.postslist=result
+      this.postslist=result;
+      this.originallist=result;
+    })
+    this._usersService.userslist().subscribe(result=>{
+      this.userslist=result;
+      this.originallist=result;
     })
   }
+
+  getpostbyuserId(){
+    this.postslist=this.originallist;
+    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId);
+  }
+
 
 }
