@@ -17,6 +17,7 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     this._usersService.todolist().subscribe(result => {
       this.todolist=result;
+      this.originallist=this.todolist;
     })
     this._usersService.userslist().subscribe(result=>{
       this.userslist=result;

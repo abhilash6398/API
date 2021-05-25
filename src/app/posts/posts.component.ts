@@ -18,7 +18,6 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this._usersService.postslist().subscribe(result=>{
       this.postslist=result;
-      this.originallist=result;
     })
     this._usersService.userslist().subscribe(result=>{
       this.userslist=result;
@@ -26,7 +25,7 @@ export class PostsComponent implements OnInit {
   }
 
   getpostbyuserId(){
-    this.postslist=this.originallist;
-    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId);
+    this.postslist=this.originallist
+    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId)
   }
 }
