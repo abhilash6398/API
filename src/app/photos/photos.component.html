@@ -1,4 +1,18 @@
 <h1 style="text-align: center;">PHOTOS DATA </h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" style="text-align: left;">
+      <label for="albumID">ALBUM-ID</label>
+      <select name="album" id="album" class="form-control" [(ngModel)]="albumId" (change)="getphotobyalbumId()">
+        <option *ngFor="let albums of albumslist" value="{{albums.id}}">{{albums.title}}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
 <div class="container-fluid">
   <table class="table table-bordered">
     <thead>
@@ -12,7 +26,7 @@
     </thead>
     <tbody *ngFor="let photos of photoslist;">
       <tr>
-        <td>{{photos.albumId}}}</td>
+        <td>{{photos.albumId}}</td>
         <td>{{photos.id}}</td>
         <td>{{photos.title}}</td>
         <td>{{photos.url}}</td>

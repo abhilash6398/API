@@ -1,6 +1,18 @@
 <h1 style="text-align: center;">COMMENTS DATA </h1>
-<select name="post" id="post" class="form-control" [(ngModel)]="postId" (change)="getcommentbypostId()">
-<option *ngFor="let posts of postslist" value="{{posts.id}}">{{posts.id}}</option></select>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" style="text-align: left;">
+      <label for="albumID">Post-ID</label>
+      <select name="post" id="post" class="form-control" [(ngModel)]="postId" (change)="getcommentbypostId()">
+        <option *ngFor="let posts of postslist" value="{{posts.id}}">{{posts.title}}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
 <div class="container-fluid">
   <table class="table table-bordered">
     <thead>

@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
   originallist: any=[];
   userid: any=[];
   userslist: any=[];
-  userId: any=[];
+  userId: any=0;
 
   constructor(private _usersService: UsersService) { }
 
@@ -22,7 +22,6 @@ export class PostsComponent implements OnInit {
     })
     this._usersService.userslist().subscribe(result=>{
       this.userslist=result;
-      this.originallist=result;
     })
   }
 
@@ -30,6 +29,4 @@ export class PostsComponent implements OnInit {
     this.postslist=this.originallist;
     this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId);
   }
-
-
 }

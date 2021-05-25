@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
   photoslist: any=[];
+  albumslist: any=[];
+  originallist: any=[];
+  albumId: any;
+  albumid: any;
 
   constructor(private _usersService: UsersService) { }
 
@@ -15,6 +19,13 @@ export class PhotosComponent implements OnInit {
     this._usersService.photoslist().subscribe(result=>{
       this.photoslist=result;
     })
+    this._usersService.albumslist().subscribe(result=>{
+      this.albumslist=result;
+    })
   }
 
+  getphotobyalbumId(){
+    this.photoslist=this.originallist;
+    this.photoslist=this.photoslist.filter((x:any)=>x.albumId==this.albumid)
+  }
 }

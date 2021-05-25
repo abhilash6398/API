@@ -1,4 +1,18 @@
 <h1 style="text-align: center;">ALBUMS DATA </h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" style="text-align: left;">
+      <label for="userId">USER-ID</label>
+      <select name="user" id="user" class="form-control" [(ngModel)]="userId" (change)="getalbumbyuserId()">
+        <option *ngFor="let users of userslist" value="{{users.id}}">{{users.name}}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
 <div class="container-fluid">
   <table class="table table-bordered">
     <thead>
