@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class PostsComponent implements OnInit {
   postslist: any=[];
   originallist: any=[];
-  userid: any=[];
+  userid: any=0;
   userslist: any=[];
-  userId: any=0;
+  userId: any;
 
   constructor(private _usersService: UsersService) { }
 
@@ -26,7 +26,7 @@ export class PostsComponent implements OnInit {
   }
 
   getpostbyuserId(){
-    this.postslist=this.originallist
-    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId)
+    this.postslist=this.originallist;
+    this.postslist=this.postslist.filter((x:any)=>x.userid==this.userId);
   }
 }

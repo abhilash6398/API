@@ -10,23 +10,23 @@ export class CommentsComponent implements OnInit {
   commentslist: any=[];
   postslist: any=[];
   originallist: any=[];
-  postid: any;
-  postId: any=[];
+  postid: any=0;
+  postId: any;
 
   constructor(private _usersService: UsersService) { }
 
   ngOnInit(): void {
     this._usersService.commentslist().subscribe(result=>{
       this.commentslist=result;
+      this.originallist=result;
     })
     this._usersService.postslist().subscribe(result=>{
       this.postslist=result;
-      this.originallist=result;
     })
   }
 
   getcommentbypostId(){
     this.commentslist=this.originallist;
-    this.commentslist=this.commentslist.filter((x:any)=>x.postId==this.postid);
+    this.commentslist=this.commentslist().filter((x:any)=>x.postId==this.postid);
   }
 }
