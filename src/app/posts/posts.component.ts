@@ -18,6 +18,7 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this._usersService.postslist().subscribe(result=>{
       this.postslist=result;
+      this.originallist=result;
     })
     this._usersService.userslist().subscribe(result=>{
       this.userslist=result;

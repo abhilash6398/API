@@ -5,7 +5,7 @@
     <div class="col-md-3" style="text-align: left;">
       <label for="albumID">Post-ID</label>
       <select name="post" id="post" class="form-control" [(ngModel)]="postId" (change)="getcommentbypostId()">
-        <option *ngFor="let posts of postslist" value="{{posts.id}}">{{posts.title}}</option>
+        <option *ngFor="let posts of postslist" value="{{posts.id}}">{{posts.id}}</option>
       </select>
     </div>
   </div>
@@ -17,7 +17,6 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>postId</th>
         <th>id</th>
         <th>name</th>
         <th>email`</th>
@@ -26,7 +25,6 @@
     </thead>
     <tbody *ngFor="let comments of commentslist;">
       <tr>
-        <td>{{comments.postId}}</td>
         <td>{{comments.id}}</td>
         <td>{{comments.name}}</td>
         <td>{{comments.email}}</td>

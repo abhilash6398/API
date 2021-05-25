@@ -10,7 +10,7 @@ export class CommentsComponent implements OnInit {
   commentslist: any=[];
   postslist: any=[];
   originallist: any=[];
-  postid: any=0;
+  postid: any;
   postId: any=[];
 
   constructor(private _usersService: UsersService) { }
@@ -21,11 +21,12 @@ export class CommentsComponent implements OnInit {
     })
     this._usersService.postslist().subscribe(result=>{
       this.postslist=result;
+      this.originallist=result;
     })
   }
 
   getcommentbypostId(){
     this.commentslist=this.originallist;
-    this.commentslist=this.commentslist.filter((x:any)=>x.postId==this.postid)
+    this.commentslist=this.commentslist.filter((x:any)=>x.postId==this.postid);
   }
 }
