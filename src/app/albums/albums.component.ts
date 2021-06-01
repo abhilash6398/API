@@ -10,7 +10,7 @@ export class AlbumsComponent implements OnInit {
   albumslist: any=[];
   originallist: any=[];
   userslist: any=[];
-  userId: any=[];
+  userId: any;
   userid: any=0;
 
   constructor(private _usersService: UsersService) { }

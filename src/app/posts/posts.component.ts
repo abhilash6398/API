@@ -15,13 +15,15 @@ export class PostsComponent implements OnInit {
 
   constructor(private _usersService: UsersService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this._usersService.postslist().subscribe(result=>{
       this.postslist=result;
       this.originallist=result;
+
     })
     this._usersService.userslist().subscribe(result=>{
       this.userslist=result;
+      this.originallist=result;
     })
   }
 

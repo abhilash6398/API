@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-md-3" style="text-align: left;">
       <label for="usersId">USER-ID</label>
-      <select name="user" id="user" class="form-control" [(ngModel)]="userId" (change)="getpostbyuserId()">
+      <select name="user" id="user" class="form-control" (ngModel)="userId" (change)="getpostbyuserId()">
         <option *ngFor="let users of userslist" value="{{users.id}}">{{users.name}}</option>
       </select>
     </div>
@@ -18,6 +18,7 @@
   <table class="table table-bordered">
     <thead>
       <tr>
+        <th>userId</th>
         <th>id</th>
         <th>title</th>
         <th>body</th>
@@ -25,6 +26,7 @@
     </thead>
     <tbody *ngFor="let posts of postslist;">
       <tr>
+        <td>{{posts.userId}}</td>
         <td>{{posts.id}}</td>
         <td>{{posts.title}}</td>
         <td>{{posts.body}}</td>
